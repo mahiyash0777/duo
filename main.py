@@ -1162,20 +1162,20 @@ async def txt_handler(bot: Client, m: Message):
                         t_name = "Untitled"
                         v_name = re.sub(r":.*", "", raw_title).strip()
                     
-                    cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{v_name} [{res}p] **{CR}.mkv`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{v_name} **{CR}.pdf`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{v_name} **{CR}.zip`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{v_name} **{CR}.jpg`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{v_name} **{CR}.html`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    ccyt = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{v_name} **{CR}.mp4`\n<a href="{url}">__**Click Here to Watch Stream**__</a>\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    ccm = f'[🎵]Mp3 Id : {str(count).zfill(3)}\n**Audio Title :** `{v_name} **{CR}.mp3`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
+                    cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{v_name} [{res}p]🌟{CR}.mkv`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{v_name}🌟{CR}.pdf`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{v_name}🌟{CR}.zip`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{v_name}🌟{CR}.jpg`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{v_name}🌟{CR}.html`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    ccyt = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{v_name}🌟{CR}.mp4`\n<a href="{url}">__**Click Here to Watch Stream**__</a>\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    ccm = f'[🎵]Mp3 Id : {str(count).zfill(3)}\n**Audio Title :** `{v_name}🌟{CR}.mp3`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
                 else:
-                    cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{name1} [{res}p] **{CR}.mkv`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{name1} **{CR}.pdf`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1} **{CR}.zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By :**{CR}\n' 
-                    ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1} **{CR}.jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    ccm = f'[🎵]Audio Id : {str(count).zfill(3)}\n**Audio Title :** `{name1} **{CR}.mp3`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By :**{CR}\n'
-                    cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{name1} **{CR}.html`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By :**{CR}\n'
+                    cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{name1} [{res}p]🌟{CR}.mkv`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{name1}🌟{CR}.pdf`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1}🌟{CR}.zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n' 
+                    ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1}🌟{CR}.jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    ccm = f'[🎵]Audio Id : {str(count).zfill(3)}\n**Audio Title :** `{name1}🌟{CR}.mp3`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{name1}🌟{CR}.html`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
                     
                 if "drive" in url:
                     try:
