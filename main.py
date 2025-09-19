@@ -688,7 +688,7 @@ async def upgrade_button(client, callback_query):
 async def feature_button(client, callback_query):
   caption = "**✨ My Premium BOT Features :**"
   keyboard = InlineKeyboardMarkup([
-      [InlineKeyboardButton("📌 Auto Pin Batch Name", callback_data="pin_command")],
+      [InlineKeyboardButton("📌 Auto Pin 📚 Course ", callback_data="pin_command")],
       [InlineKeyboardButton("💧 Watermark", callback_data="watermark_command"), InlineKeyboardButton("🔄 Reset", callback_data="reset_command")],
       [InlineKeyboardButton("🖨️ Bot Working Logs", callback_data="logs_command")],
       [InlineKeyboardButton("🖋️ File Name", callback_data="custom_command"), InlineKeyboardButton("🏷️ Title", callback_data="titlle_command")],
@@ -707,7 +707,7 @@ async def feature_button(client, callback_query):
 @bot.on_callback_query(filters.regex("pin_command"))
 async def pin_button(client, callback_query):
   keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("🔙 Back to Feature", callback_data="feat_command")]])
-  caption = f"**Auto Pin 📌 Batch Name :**\n\nAutomatically Pins the Batch Name in Channel or Group, If Starting from the First Link."
+  caption = f"**Auto Pin 📌 📚 Course  :**\n\nAutomatically Pins the 📚 Course  in Channel or Group, If Starting from the First Link."
   await callback_query.message.edit_media(
     InputMediaPhoto(
       media="https://tinypic.host/images/2025/07/14/file_000000002d44622f856a002a219cf27aconversation_id68747543-56d8-800e-ae47-bb6438a09851message_id8e8cbfb5-ea6c-4f59-974a-43bdf87130c0.png",
@@ -932,7 +932,7 @@ async def txt_handler(bot: Client, m: Message):
         await m.reply_text("**🔹Exiting Task......  **")
         return
         
-    await editable.edit(f"**Enter Batch Name or send /d**")
+    await editable.edit(f"**Enter 📚 Course  or send /d**")
     try:
         input1: Message = await bot.listen(editable.chat.id, timeout=20)
         raw_text0 = input1.text
@@ -1162,20 +1162,20 @@ async def txt_handler(bot: Client, m: Message):
                         t_name = "Untitled"
                         v_name = re.sub(r":.*", "", raw_title).strip()
                     
-                    cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{v_name} [{res}p]🌟{CR}.mkv`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{v_name}🌟{CR}.pdf`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{v_name}🌟{CR}.zip`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{v_name}🌟{CR}.jpg`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{v_name}🌟{CR}.html`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    ccyt = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{v_name}🌟{CR}.mp4`\n<a href="{url}">__**Click Here to Watch Stream**__</a>\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    ccm = f'[🎵]Mp3 Id : {str(count).zfill(3)}\n**Audio Title :** `{v_name}🌟{CR}.mp3`\n<blockquote><b>Batch Name : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
+                    cc = f'[🎞️] Vid Id : {str(count).zfill(3)}\n**Video Title :** `{v_name} [{res}p]🌟{CR}.mkv`\n\n<blockquote><b>📚 Course  : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{v_name}🌟{CR}.pdf`\n\n<blockquote><b>📚 Course  : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{v_name}🌟{CR}.zip`\n\n<blockquote><b>📚 Course  : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{v_name}🌟{CR}.jpg`\n\n<blockquote><b>📚 Course  : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{v_name}🌟{CR}.html`\n\n<blockquote><b>📚 Course  : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    ccyt = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{v_name}🌟{CR}.mp4`\n\n<a href="{url}">__**Click Here to Watch Stream**__</a>\n<blockquote><b>📚 Course  : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    ccm = f'[🎵]Mp3 Id : {str(count).zfill(3)}\n**Audio Title :** `{v_name}🌟{CR}.mp3`\n\n<blockquote><b>📚 Course  : {b_name}\nTopic Name : {t_name}</b></blockquote>\n\n**🌟 Download By :**{CR}\n'
                 else:
-                    cc = f'[🎥]Vid Id : {str(count).zfill(3)}\n**Video Title :** `{name1} [{res}p]🌟{CR}.mkv`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{name1}🌟{CR}.pdf`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1}🌟{CR}.zip`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n' 
-                    ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1}🌟{CR}.jpg`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    ccm = f'[🎵]Audio Id : {str(count).zfill(3)}\n**Audio Title :** `{name1}🌟{CR}.mp3`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
-                    cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{name1}🌟{CR}.html`\n<blockquote><b>Batch Name :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cc = f'[🎞️] Vid Id : {str(count).zfill(3)}\n**Video Title :** `{name1} [{res}p]🌟{CR}.mkv`\n\n<blockquote><b>📚 Course  :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cc1 = f'[📕]Pdf Id : {str(count).zfill(3)}\n**File Title :** `{name1}🌟{CR}.pdf`\n\n<blockquote><b>📚 Course  :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cczip = f'[📁]Zip Id : {str(count).zfill(3)}\n**Zip Title :** `{name1}🌟{CR}.zip`\n\n<blockquote><b>📚 Course  :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n' 
+                    ccimg = f'[🖼️]Img Id : {str(count).zfill(3)}\n**Img Title :** `{name1}🌟{CR}.jpg`\n\n<blockquote><b>📚 Course  :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    ccm = f'[🎵]Audio Id : {str(count).zfill(3)}\n**Audio Title :** `{name1}🌟{CR}.mp3`\n\n<blockquote><b>📚 Course  :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
+                    cchtml = f'[🌐]Html Id : {str(count).zfill(3)}\n**Html Title :** `{name1}🌟{CR}.html`\n\n<blockquote><b>📚 Course  :</b> {b_name}</blockquote>\n\n**🌟 Download By : **{CR}\n'
                     
                 if "drive" in url:
                     try:
@@ -1378,9 +1378,9 @@ async def txt_handler(bot: Client, m: Message):
     success_count = len(links) - failed_count
     video_count = v2_count + mpd_count + m3u8_count + yt_count + drm_count + zip_count + other_count
     if raw_text7 == "/d":
-        await bot.send_message(channel_id, f"<b>-┈━═.•°✅ Completed ✅°•.═━┈-</b>\n<blockquote><b>🎯Batch Name : {b_name}</b></blockquote>\n<blockquote>🔗 Total URLs: {len(links)} \n┃   ┠🔴 Total Failed URLs: {failed_count}\n┃   ┠🟢 Total Successful URLs: {success_count}\n┃   ┃   ┠🎥 Total Video URLs: {video_count}\n┃   ┃   ┠📄 Total PDF URLs: {pdf_count}\n┃   ┃   ┠📸 Total IMAGE URLs: {img_count}</blockquote>\n")
+        await bot.send_message(channel_id, f"<b>-┈━═.•°✅ Completed ✅°•.═━┈-</b>\n<blockquote><b>🎯📚 Course  : {b_name}</b></blockquote>\n<blockquote>🔗 Total URLs: {len(links)} \n┃   ┠🔴 Total Failed URLs: {failed_count}\n┃   ┠🟢 Total Successful URLs: {success_count}\n┃   ┃   ┠🎥 Total Video URLs: {video_count}\n┃   ┃   ┠📄 Total PDF URLs: {pdf_count}\n┃   ┃   ┠📸 Total IMAGE URLs: {img_count}</blockquote>\n")
     else:
-        await bot.send_message(channel_id, f"<b>-┈━═.•°✅ Completed ✅°•.═━┈-</b>\n<blockquote><b>🎯Batch Name : {b_name}</b></blockquote>\n<blockquote>🔗 Total URLs: {len(links)} \n┃   ┠🔴 Total Failed URLs: {failed_count}\n┃   ┠🟢 Total Successful URLs: {success_count}\n┃   ┃   ┠🎥 Total Video URLs: {video_count}\n┃   ┃   ┠📄 Total PDF URLs: {pdf_count}\n┃   ┃   ┠📸 Total IMAGE URLs: {img_count}</blockquote>\n")
+        await bot.send_message(channel_id, f"<b>-┈━═.•°✅ Completed ✅°•.═━┈-</b>\n<blockquote><b>🎯📚 Course  : {b_name}</b></blockquote>\n<blockquote>🔗 Total URLs: {len(links)} \n┃   ┠🔴 Total Failed URLs: {failed_count}\n┃   ┠🟢 Total Successful URLs: {success_count}\n┃   ┃   ┠🎥 Total Video URLs: {video_count}\n┃   ┃   ┠📄 Total PDF URLs: {pdf_count}\n┃   ┃   ┠📸 Total IMAGE URLs: {img_count}</blockquote>\n")
         await bot.send_message(m.chat.id, f"<blockquote><b>✅ Your Task is completed, please check your Set Channel📱</b></blockquote>")
 
 
